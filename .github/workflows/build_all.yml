@@ -1,0 +1,43 @@
+name: 一键全部构建
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 20 * * sun'
+    
+jobs:
+
+  build_11r:
+    uses: ./.github/workflows/sm8475-11r.yml
+      
+  # build_12r:
+  #  uses: ./.github/workflows/sm8550-12r.yml
+  
+  build_ace2pro:
+    uses: ./.github/workflows/sm8550-ace2pro.yml
+    
+      
+  build_ace3:
+    uses: ./.github/workflows/sm8550-ace3.yml
+    
+      
+  build_12:
+    uses: ./.github/workflows/sm8650-12.yml
+    
+      
+  build_ace3pro:
+    uses: ./.github/workflows/sm8650-ace3pro.yml
+    
+      
+  build_ace3v:
+    uses: ./.github/workflows/sm7675-ace3v.yml
+    
+      
+  build_pad2:
+    uses: ./.github/workflows/sm8650-pad2.yml
+    
+      
+  build_ace5:
+    uses: ./.github/workflows/sm8650-ace5.yml
+    

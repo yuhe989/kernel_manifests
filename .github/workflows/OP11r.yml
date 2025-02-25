@@ -40,10 +40,10 @@ jobs:
 
     - name: 拉取 OnePlus 11R 内核清单
       run: |
-      mkdir kernel && cd kernel
-      repo init -u https://github.com/OnePlusOSS/kernel_manifest.git -b oneplus/sm8475 -m oneplus_11r_v.xml --depth=1
-      repo sync -j$(nproc --all)
-      rm -f kernel_platform/common/scripts/setlocalversion
+        mkdir kernel && cd kernel
+        repo init -u https://github.com/OnePlusOSS/kernel_manifest.git -b oneplus/sm8475 -m oneplus_11r_v.xml --depth=1
+        repo sync -j$(nproc --all)
+        rm -f kernel_platform/common/scripts/setlocalversion
         
     - name: 添加KernelSU Next
       run: |

@@ -39,7 +39,7 @@ jobs:
         pip3 install requests_toolbelt requests
 
     - name: 拉取 OnePlus 11R 内核清单
-  run: |
+      run: |
     mkdir kernel && cd kernel
     repo init -u https://github.com/OnePlusOSS/kernel_manifest.git -b oneplus/sm8475 -m oneplus_11r_v.xml --depth=1
     repo sync -j$(nproc --all)

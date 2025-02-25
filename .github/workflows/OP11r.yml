@@ -1,4 +1,4 @@
-name: 构建11r内核
+name: 构建OP11r内核
 
 on:
   workflow_dispatch:

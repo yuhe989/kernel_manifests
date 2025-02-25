@@ -1,12 +1,19 @@
 name: 构建SM8475-11r内核
 
 on:
+  workflow_call:
+    inputs:
+      upload_alist:
+        required: false
+        type: boolean
+        default: false
+
   workflow_dispatch:
 
 jobs:
-  
+
   build:
-    
+
     runs-on: ubuntu-latest
 
     steps:
@@ -98,4 +105,3 @@ jobs:
         path: kernel/kernel_platform/out/msm-waipio-waipio-gki/gki_kernel/dist/Image
 
 
-        

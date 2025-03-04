@@ -3,8 +3,8 @@ name: 一键全部构建
 on:
   workflow_dispatch:
 
-  schedule:
-    - cron: '0 20 * * sun'
+  # schedule:
+  #  - cron: '0 20 * * sun'
     
 jobs:
 
